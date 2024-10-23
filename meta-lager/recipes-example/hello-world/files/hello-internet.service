@@ -1,0 +1,10 @@
+[Unit]
+Description=Hello Internet Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/wget --post-data="Hello, internet!" https://webhook.site/07485576-7771-4bc0-a77a-7a949ac698f0
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
